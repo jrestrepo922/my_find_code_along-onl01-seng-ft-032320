@@ -8,10 +8,12 @@ def my_find(collection)
  i = 0 
  
  while collection.length > i 
- if yield(collection[i])
-   return collection[i]
+  if yield(collection[i])
+    return collection[i]
+  end 
+  i = i + 1
  end 
- i = i + 1
+ return false
  
 end
 
